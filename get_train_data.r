@@ -45,14 +45,31 @@ df_roh <- df_roh %>%
     dplyr::filter(corpus_code!="62420_201105") %>%
     dplyr::filter(corpus_code!="62623_201105") %>%
     dplyr::filter(corpus_code!="62901_201105")
+    
+## Australien
+## Vor dem Jahr 2010 wurden überwiegend politische Reden von Kandidierenden kodiert. Erst ab dem Jahr 2010 wurden mehrheitlich Wahlprogramme verwendet.
+df_roh <- df_roh %>%
+    dplyr::filter(corpus_code!="63620_201111") %>%
+    dplyr::filter(corpus_code!="63810_201111") %>%
+    dplyr::filter(corpus_code!="63110_200410") %>%
+    dplyr::filter(corpus_code!="63320_200410") %>%
+    dplyr::filter(corpus_code!="63620_200410") %>%
+    dplyr::filter(corpus_code!="63810_200410") %>%
+    dplyr::filter(corpus_code!="63110_200711") %>%
+    dplyr::filter(corpus_code!="63320_200711") %>%
+    dplyr::filter(corpus_code!="63620_200711") %>%
+    dplyr::filter(corpus_code!="63810_200711")
+## Die Parteien 63621 und 63622 sind, ähnlich wie die CSU, Schwesterparteien von 63620
+df_roh <- df_roh %>%
+    dplyr::filter(str_starts(corpus_code,"63621")==FALSE) %>%
+    dplyr::filter(str_starts(corpus_code,"63622")==FALSE)
 
 df <- df_roh %>%
-    select(text,corpus_code,left_right)
+    select(text,corpus_code,countryname)
 
 # Output
 df_temp <- df %>%
-    mutate(election=str_extract(corpus_code,pattern="[0-9]*$")) %>%
-    group_by(election) %>%
-    summarise(n=n())
+    group_by(countryname) %>%
+    summarise(manifestos=n_distinct(corpus_code),quasi_saetze=n())
 
-print(df_temp)
+print(head(df_temp,n=10))
