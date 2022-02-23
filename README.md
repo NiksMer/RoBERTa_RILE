@@ -8,14 +8,22 @@ Die Trainingsdaten sind wie folgt verteilt:
 
 | left_right | Beschreibung | Anzahl |
 |------------|--------------|--------|
-| 0          | Neutral      | 60.809 |
-| 1          | Links        | 42.553 |
-| 2          | Rechts       | 29.937 |
+| 0          | Neutral      | 48.719 |
+| 1          | Links        | 33.951 |
+| 2          | Rechts       | 23.969 |
 
 Deutlich wird, dass es sich nicht um einen balancierten Datensatz handelt.
 ## Validierungsdaten
 
-Der Validierungsdatensatz wird per Zufallsauswahl aus dem Trainingsdatensatz gebildet.
+Der Validierungsdatensatz wurden per Zufallsauswahl aus dem Trainingsdatensatz gebildet.
+
+| left_right | Beschreibung | Anzahl |
+|------------|--------------|--------|
+| 0          | Neutral      | 12.090 |
+| 1          | Links        | 8.602 |
+| 2          | Rechts       | 5.968 |
+
+Deutlich wird, dass es sich nicht um einen balancierten Datensatz handelt.
 
 ## Testdaten
 
