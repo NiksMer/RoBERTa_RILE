@@ -40,3 +40,10 @@ vignettes/*.pdf
 
 # Manifesto API
 manifesto_apikey.txt
+
+# Logs
+logs/
+
+# MLflow
+mlruns/
+
