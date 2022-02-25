@@ -28,6 +28,6 @@ df_test <- df_roh %>%
     select(text,left_right,corpus_code)
 
 # Daten speichern
-write_csv(df_train,"trainingsdaten_rile_23022022.csv")
-write_csv(df_val,"validierungsdaten_rile_23022022.csv")
-write_csv(df_test,"testdaten_rile_23022022.csv")
+write_csv(df_train,"00_Data/trainingsdaten_rile_23022022.csv")
+write_csv(df_val,"00_Data/validierungsdaten_rile_23022022.csv")
+write_csv(df_test,"00_Data/testdaten_rile_23022022.csv")
