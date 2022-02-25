@@ -10,7 +10,8 @@ df_roh <- read_csv("https://raw.githubusercontent.com/NiksMer/get_manifesto_data
 # Filtern auf Trainingsdaten. Canada wird herausgefiltert.
 df_train_roh <- df_roh %>%
     dplyr::filter(countryname!="Canada") %>%
-    select(text,left_right)
+    select(text,left_right) %>%
+    rename(label = left_right)
 
 ## 80% Trainingsgröße
 smp_size <- floor(0.8 * nrow(df_train_roh))
@@ -25,7 +26,8 @@ df_val <- df_train_roh[-train_ind, ]
 
 df_test <- df_roh %>%
     dplyr::filter(countryname=="Canada") %>%
-    select(text,left_right,corpus_code)
+    select(text,left_right,corpus_code) %>%
+    rename(label = left_right)
 
 # Daten speichern
 write_csv(df_train,"00_Data/trainingsdaten_rile_23022022.csv")
