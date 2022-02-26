@@ -8,9 +8,9 @@ Die Trainingsdaten sind wie folgt verteilt:
 
 | left_right | Beschreibung | Anzahl |
 |------------|--------------|--------|
-| 0          | Neutral      | 48.719 |
-| 1          | Links        | 33.951 |
-| 2          | Rechts       | 23.969 |
+| 0          | Neutral      | 52.910 |
+| 1          | Links        | 37.231 |
+| 2          | Rechts       | 26.575 |
 
 Deutlich wird, dass es sich nicht um einen balancierten Datensatz handelt.
 ## Validierungsdaten
@@ -19,23 +19,22 @@ Der Validierungsdatensatz wurden per Zufallsauswahl aus dem Trainingsdatensatz g
 
 | left_right | Beschreibung | Anzahl |
 |------------|--------------|--------|
-| 0          | Neutral      | 12.090 |
-| 1          | Links        | 8.602 |
-| 2          | Rechts       | 5.968 |
+| 0          | Neutral      | 9.474 |
+| 1          | Links        | 6.512 |
+| 2          | Rechts       | 4.611 |
 
 Deutlich wird, dass es sich nicht um einen balancierten Datensatz handelt.
 
 ## Testdaten
 
-Als Testdaten stehen alle kanadischen Daten zur Verfügung.
-Hieraus ergeben sich 14 Wahlprogramme aus einem Zeitraum von 2004-2008 und aus dem Jahr 2015.
+Als Testdaten stehen  kanadischen Daten aus einem Zeitraum von 2004-2008 zur Verfügung.
 
 | left_right | Beschreibung | Anzahl |
 |------------|--------------|--------|
-| 0          | Neutral      | 5.469 |
-| 1          | Links        | 3.801 |
-| 2          | Rechts       | 3.087 |
+| 0          | Neutral      | 3.894 |
+| 1          | Links        | 2.611 |
+| 2          | Rechts       | 1.838 |
 
 Auch hier besteht keien Balance zwischen den Labels.
-Interessanter wird es allerdings, für die 14 Wahlprogramme den RILE-Index vorherzusagen und im Zeitverlauf zu beobachten.
+Interessanter wird es allerdings, für die Wahlprogramme den RILE-Index vorherzusagen und im Zeitverlauf zu beobachten.
 

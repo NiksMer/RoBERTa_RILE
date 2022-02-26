@@ -8,13 +8,20 @@ suppressPackageStartupMessages(library(readr))
 df_roh <- read_csv("https://raw.githubusercontent.com/NiksMer/get_manifesto_data/main/complete_data.csv")
 
 # Filtern auf Trainingsdaten. Canada wird herausgefiltert.
+# Filtern auf Trainingsdaten. Canada wird herausgefiltert.
 df_train_roh <- df_roh %>%
-    dplyr::filter(countryname!="Canada") %>%
-    select(text,left_right) %>%
+    select(text,left_right,corpus_code) %>%
+    dplyr:: filter(!corpus_code %in% c("62110_200810","62320_200406","62320_200601","62320_200810","62420_200406","62420_200601","62420_200810","62623_200406","62623_200601","62623_200810")) %>%
+    select(-corpus_code) %>%
+    rename(label = left_right)
+
+df_test <- df_roh %>%
+    select(text,left_right,corpus_code) %>%
+    dplyr:: filter(corpus_code %in% c("62110_200810","62320_200406","62320_200601","62320_200810","62420_200406","62420_200601","62420_200810","62623_200406","62623_200601","62623_200810")) %>%
     rename(label = left_right)
 
 ## 80% Trainingsgröße
-smp_size <- floor(0.8 * nrow(df_train_roh))
+smp_size <- floor(0.85 * nrow(df_train_roh))
 
 ## Seed definieren für Reproduzierbarkeit
 set.seed(123)
@@ -24,12 +31,7 @@ train_ind <- sample(seq_len(nrow(df_train_roh)), size = smp_size)
 df_train <- df_train_roh[train_ind, ]
 df_val <- df_train_roh[-train_ind, ]
 
-df_test <- df_roh %>%
-    dplyr::filter(countryname=="Canada") %>%
-    select(text,left_right,corpus_code) %>%
-    rename(label = left_right)
-
 # Daten speichern
-write_csv(df_train,"00_Data/trainingsdaten_rile_23022022.csv")
-write_csv(df_val,"00_Data/validierungsdaten_rile_23022022.csv")
-write_csv(df_test,"00_Data/testdaten_rile_23022022.csv")
+write_csv(df_train,"00_Data/trainingsdaten_rile_26022022.csv")
+write_csv(df_val,"00_Data/validierungsdaten_rile_26022022.csv")
+write_csv(df_test,"00_Data/testdaten_rile_26022022.csv")
