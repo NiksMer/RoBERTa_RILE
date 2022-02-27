@@ -8,9 +8,9 @@ Die Trainingsdaten sind wie folgt verteilt:
 
 | left_right | Beschreibung | Anzahl |
 |------------|--------------|--------|
-| 0          | Neutral      | 52.910 |
-| 1          | Links        | 37.231 |
-| 2          | Rechts       | 26.575 |
+| 0          | Neutral      | 52.277 |
+| 1          | Links        | 37.106 |
+| 2          | Rechts       | 26.560 |
 
 Deutlich wird, dass es sich nicht um einen balancierten Datensatz handelt.
 ## Validierungsdaten
@@ -19,9 +19,9 @@ Der Validierungsdatensatz wurden per Zufallsauswahl aus dem Trainingsdatensatz g
 
 | left_right | Beschreibung | Anzahl |
 |------------|--------------|--------|
-| 0          | Neutral      | 9.474 |
-| 1          | Links        | 6.512 |
-| 2          | Rechts       | 4.611 |
+| 0          | Neutral      | 9.198 |
+| 1          | Links        | 6.637 |
+| 2          | Rechts       | 4.626 |
 
 Deutlich wird, dass es sich nicht um einen balancierten Datensatz handelt.
 
@@ -31,7 +31,7 @@ Als Testdaten stehen  kanadischen Daten aus einem Zeitraum von 2004-2008 zur Ver
 
 | left_right | Beschreibung | Anzahl |
 |------------|--------------|--------|
-| 0          | Neutral      | 3.894 |
+| 0          | Neutral      | 3.881 |
 | 1          | Links        | 2.611 |
 | 2          | Rechts       | 1.838 |
 
