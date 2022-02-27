@@ -32,6 +32,6 @@ df_train <- df_train_roh[train_ind, ]
 df_val <- df_train_roh[-train_ind, ]
 
 # Daten speichern
-write_csv(df_train,"00_Data/trainingsdaten_rile_26022022.csv")
-write_csv(df_val,"00_Data/validierungsdaten_rile_26022022.csv")
-write_csv(df_test,"00_Data/testdaten_rile_26022022.csv")
+write_csv(df_train,"00_Data/01_data/trainingsdaten_rile_27022022.csv")
+write_csv(df_val,"00_Data/01_data/validierungsdaten_rile_27022022.csv")
+write_csv(df_test,"00_Data/01_data/testdaten_rile_27022022.csv")
