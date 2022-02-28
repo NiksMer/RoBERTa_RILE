@@ -149,7 +149,13 @@ warmup_ratio_parameter = 0.05
 
 # %%
 # Modell laden
-model = RobertaForSequenceClassification.from_pretrained(model_to_use, num_labels=label_count)
+model = RobertaForSequenceClassification.from_pretrained(
+    model_to_use, 
+    num_labels=label_count,
+    id2label=id2label_parameter,
+    label2id=label2id_parameter
+    )
+
 
 # %%
 # Trainer definieren
