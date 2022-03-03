@@ -22,7 +22,7 @@ model_to_use = "roberta-base"
 trained_model_name = "RoBERTa-RILE"
 
 ## Max Sequence Length
-max_lengh_parameter = 514
+max_lengh_parameter = 512
 
 ## Anzahl Labels
 label_count = 3
@@ -58,13 +58,13 @@ test_report_name = '01_report/test_report_rile.txt'
 ####### Data Config ############
 
 ## Train Data
-train_data = "00_Data/01_data/trainingsdaten_rile_27022022.csv"
+train_data = "00_Data_intern/01_data/trainingsdaten_rile_27022022.csv"
 
 ## Valid Data
-valid_data = "00_Data/01_data/validierungsdaten_rile_27022022.csv"
+valid_data = "00_Data_intern/01_data/validierungsdaten_rile_27022022.csv"
 
 ## Test Data
-test_data = "00_Data/01_data/testdaten_rile_27022022.csv"
+test_data = "00_Data_intern/01_data/testdaten_rile_27022022.csv"
 
 ## Delimeter
 delimeter_char = ","
