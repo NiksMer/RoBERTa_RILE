@@ -49,6 +49,7 @@ mlruns/
 
 # Modell
 RoBERTa-RILE/
+RoBERTa-RILE-v2/
 
 # Daten
 00_Data_intern/
